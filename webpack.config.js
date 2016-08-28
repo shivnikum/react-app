@@ -5,7 +5,8 @@ module.exports = {
 	entry: './main.js',
 	output: {
 		path: __dirname, 
-    	filename: 'build/bundle.js' 
+    	filename: 'build/bundle.js' ,
+    	sourceMapFilename: "app.js.map",
 	},
 	module: {
 		loaders: [
@@ -22,7 +23,9 @@ module.exports = {
 	},
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin()
-    ]
+    ],
+    devtool: 'inline-source-map'
+
 
 
 };

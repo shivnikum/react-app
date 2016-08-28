@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+
 import Header from './layout/Header';
 import Navigation from './layout/Navigation';
 import Container from './layout/Container';
 import Footer from './layout/Footer';
+
 
 
 export default class App extends React.Component {
@@ -16,7 +18,7 @@ export default class App extends React.Component {
         	<div>
         		<Header />
         		<Navigation />
-        		<Container />
+        		{this.props.children}
 	       		<Footer />
         	</div>      
         );
